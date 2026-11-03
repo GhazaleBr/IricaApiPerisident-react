@@ -1,0 +1,60 @@
+/* ظرف اصلی برنامه: تمام‌عرض و تمام‌ارتفاع */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* هدر تمام‌عرض */
+.app-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* بدنه اصلی برای قرارگیری کامپوننت آپلود و گزارش‌ها */
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px; /* جلوگیری از کشیدگی بیش‌از‌حد در مانیتورهای عریض */
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* فوتر اختیاری تمام‌عرض */
+.app-footer {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  color: #64748b;
+  text-align: center;
+}
+
+/* تنظیمات موبایل و تبلت */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+  }
+  
+  .app-main {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}

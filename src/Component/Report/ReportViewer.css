@@ -1,0 +1,374 @@
+.report-panel {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.report-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.report-title-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-icon {
+  color: #2563eb;
+}
+
+.report-title-area h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.btn-export {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #059669;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-export:hover:not(:disabled) {
+  background-color: #047857;
+}
+
+.btn-export:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* کارت فیلترها */
+.filter-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filter-group-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.date-inputs-pair {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.date-separator {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.filter-input:focus {
+  border-color: #2563eb;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  color: #94a3b8;
+}
+
+.search-input {
+  padding-right: 2.2rem;
+}
+
+.filter-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.badge-count {
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.btn-reset {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-reset:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* جدول */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  font-size: 0.875rem;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.custom-table th {
+  background-color: #f8fafc;
+  color: #334155;
+  font-weight: 600;
+}
+
+.custom-table tr:hover {
+  background-color: #fbfcfe;
+}
+
+.date-tag {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.date-tag.secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.status-pill {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.775rem;
+}
+
+.status-pill.success {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.status-pill.pending {
+  background-color: #fffbeb;
+  color: #d97706;
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #94a3b8;
+}
+
+/* پیجینیشن */
+.pagination-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.pagination-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* استایل باکس تقویم شمسی */
+.picker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.custom-datepicker-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  background-color: #ffffff;
+  color: #1e293b;
+  text-align: center;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.custom-datepicker-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.clear-date-btn {
+  position: absolute;
+  left: 6px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.clear-date-btn:hover {
+  color: #ef4444;
+  background-color: #f1f5f9;
+}
+
+.date-tag.tertiary {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.output-cell {
+  font-size: 0.85rem;
+  color: #334155;
+  font-weight: 500;
+}
+/* تنظیم فونت و ظاهر فیلدهای تقویم MUI */
+.mui-date-field {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.mui-date-field .MuiInputBase-root {
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.mui-date-field .MuiInputLabel-root {
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.date-tag.tertiary {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.output-cell {
+  font-size: 0.85rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* اصلاح تداخل آیکون و لیبل در فیلدهای تقویم MUI */
+.date-inputs-pair .MuiFormControl-root {
+  min-width: 145px;
+  direction: rtl;
+}
+
+/* هدایت لیبل به سمت راست تا روی آیکون نیافتد */
+.date-inputs-pair .MuiInputLabel-root {
+  right: 24px !important;
+  left: auto !important;
+  transform-origin: top right !important;
+  font-family: inherit !important;
+  font-size: 0.82rem !important;
+}
+
+/* موقعیت آیکون تقویم */
+.date-inputs-pair .MuiInputAdornment-root {
+  margin-left: 0 !important;
+  margin-right: -4px !important;
+}
+
+/* فاصله داخلی متن داخل اینپوت */
+.date-inputs-pair .MuiInputBase-input {
+  text-align: right;
+  padding-right: 8px !important;
+  font-family: inherit;
+  font-size: 0.85rem;
+}

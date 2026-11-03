@@ -1,0 +1,168 @@
+.site-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 2rem;
+  display: grid;
+  /* ۳ ستون هم‌اندازه تا مرکز صفحه دقیقاً در وسط قرار بگیرد */
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.header-col {
+  display: flex;
+  align-items: center;
+}
+
+.header-col-right {
+  justify-content: flex-start;
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.header-col-center {
+  justify-content: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-logo {
+  height: 48px;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+/* در صورت نبود فایل تصویر */
+.logo-fallback {
+  height: 42px;
+  width: 42px;
+  border-radius: 8px;
+  background-color: #eff6ff;
+  border: 1px dashed #3b82f6;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-col-left {
+  justify-content: flex-end;
+}
+
+.user-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #475569;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.4rem 0.85rem;
+  border-radius: 20px;
+}
+
+.user-status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+/* واکنش‌گرا در نمایشگرهای کوچک */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.6rem 1rem;
+  }
+
+  .header-title {
+    font-size: 0.95rem;
+  }
+
+  .center-logo {
+    height: 38px;
+  }
+
+  .user-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+/* تنظیم ستون سمت راست برای جای دادن عنوان و منو */
+.header-col-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* استایل منوی ناوبری */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.nav-link.active {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-weight: 600;
+}
+
+/* اعمال استایل یکسان برای لینک‌ها و دکمه‌ها در منو */
+.site-header .nav-link,
+.site-header button.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0d6efd; /* رنگ متن مشابه تصویر */
+  background-color: #f0f7ff; /* رنگ پس‌زمینه ملایم مشابه آپلود فایل */
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.site-header .nav-link:hover,
+.site-header button.nav-link:hover {
+  background-color: #e2effe;
+}
+
+.site-header .nav-link.active {
+  background-color: #0d6efd;
+  color: #fff;
+}
